@@ -31,4 +31,64 @@ public class EventoService {
     public List<Evento> listarEventos() {
         return listaEventos;
     }
+
+//Funcionalidades Asiri
+    private final List<Evento> eventos;
+    
+public EventoService(){
+    eventos = new ArrayList<>();
 }
+   
+public boolean registrarEvento(Evento evento) {
+        if (existeEvento(evento)) {
+            System.out.println("Evento duplicado. No se registró.");
+            return false;
+        }
+        eventos.add(evento);
+        System.out.println("Evento registrado.");
+        return true;
+    }
+
+private boolean existeEvento(Evento evento) {
+        for (Evento eventoExistente : eventos) {
+            if (eventoExistente.getNombre().equalsIgnoreCase(evento.getNombre())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+public Evento buscar(int id) {
+        for (Evento evento : eventos) {
+            if(id.equals(evento.getId()){
+                return evento;
+            } else {
+            }
+        }
+        return null;
+    }
+
+public void actualizar(Evento evento) {
+        Evento existente = buscar(evento.getId());
+        if (existente != null) {
+            existente.setNombre(evento.getNombre());
+            existente.setFecha(evento.getFecha());
+            existente.setHora(evento.getHora());
+            existente.setDescripcion(evento.getDescripcion());
+            existente.setCapacidadMaxima(evento.getCapacidadMaxima());
+            System.out.println("Evento actualizado");
+        } else {
+            System.out.println("Evento no encontrado");
+        }
+}
+public void eliminar(int id) {
+        Evento evento = buscar(id);
+        if (evento != null) {
+            eventos.remove(evento);
+            System.out.println("Propietario eliminado");
+        } else {
+            System.out.println("Propietario no encontrado");
+        }
+    }
+}
+
