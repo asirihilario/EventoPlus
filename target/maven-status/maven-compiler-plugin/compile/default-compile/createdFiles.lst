@@ -1,0 +1,6 @@
+com\jemrcode\model\Participante.class
+com\jemrcode\EventoPlus.class
+com\jemrcode\model\Evento.class
+com\jemrcode\service\EventoService.class
+com\jemrcode\service\Validador.class
+com\jemrcode\service\ParticipanteService.class
