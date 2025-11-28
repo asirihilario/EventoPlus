@@ -1,66 +1,82 @@
 package com.jemrcode.model;
 
+import com.jemrcode.util.ArchivoSerializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Evento {
-    private int id;
+public class Evento implements ArchivoSerializable {
+
+    private String id;
     private String nombre;
     private LocalDate fecha;
     private LocalTime hora;
     private String descripcion;
     private int capacidadMaxima;
-    private List<Participante> listaParticipantes;
 
-    public Evento(int id, String nombre, LocalDate fecha, LocalTime hora, String descripcion, int capacidadMaxima) {
+    public Evento(String id, String nombre, LocalDate fecha, LocalTime hora, String descripcion, int capacidadMaxima) {
         this.id = id;
         this.nombre = nombre;
         this.fecha = fecha;
         this.hora = hora;
         this.descripcion = descripcion;
         this.capacidadMaxima = capacidadMaxima;
-        this.listaParticipantes = new ArrayList<>();
     }
 
-    public boolean agregarParticipante(Participante p) {
-        if (listaParticipantes.size() < capacidadMaxima && !listaParticipantes.contains(p)) {
-            listaParticipantes.add(p);
-            return true;
-        }
-        return false;
+    public String getId() {
+        return id;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getNombre() {
+        return nombre;
+    }
 
-    public LocalDate getFecha() { return fecha; }
-    public void setFecha(LocalDate fecha) { this.fecha = fecha; }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-    public LocalTime getHora() { return hora; }
-    public void setHora(LocalTime hora) { this.hora = hora; }
+    public LocalDate getFecha() {
+        return fecha;
+    }
 
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
 
-    public int getCapacidadMaxima() { return capacidadMaxima; }
-    public void setCapacidadMaxima(int capacidadMaxima) { this.capacidadMaxima = capacidadMaxima; }
+    public LocalTime getHora() {
+        return hora;
+    }
 
-    public List<Participante> getListaParticipantes() { return listaParticipantes; }
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    public void setCapacidadMaxima(int capacidadMaxima) {
+        this.capacidadMaxima = capacidadMaxima;
+    }
+
+    @Override
+    public String toFileLine() {
+        return id + ";" + nombre + ";" + fecha + ";" + hora + ";" + descripcion + ";" + capacidadMaxima;
+    }
 
     @Override
     public String toString() {
-        return "Evento{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", fecha=" + fecha +
-                ", hora=" + hora +
-                ", capacidadMaxima=" + capacidadMaxima +
-                ", inscritos=" + listaParticipantes.size() +
-                '}';
+        return nombre;
     }
 }

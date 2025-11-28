@@ -3,4 +3,9 @@ E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrc
 E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\model\Participante.java
 E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\service\EventoService.java
 E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\service\ParticipanteService.java
-E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\service\Validador.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\ui\FrmEvento.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\ui\FrmParticipante.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\ui\FrmPrincipal.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\util\ArchivoSerializable.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\util\GestorArchivos.java
+E:\Usuarios\Johan\Documentos\NetBeansProjects\EventoPlus\src\main\java\com\jemrcode\util\LineParser.java
